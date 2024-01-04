@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: paulparkinsonpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: paulparkinsonpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: paulparkinsonpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: paulparkinsonpipelinesjavascriptdocker 
+          image: multicloud.azurecr.io/paulparkinsonpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
